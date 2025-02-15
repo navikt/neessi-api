@@ -1,0 +1,31 @@
+get:
+  tags:
+    - "S040"
+  summary: Retrieve s040 in CDM version 4.3
+  description: Retrieve s040 in CDM version 4.3
+  parameters:
+    - name: instanceIdentifier
+      in: path
+      required: true
+      schema:
+        $ref: '../../properties/documents.yaml#/instanceIdentifier'
+  operationId: getS040
+  responses:
+    '200':
+      description: OK
+      content:
+        'application/json':
+          schema:
+            $ref: 'model.yaml#/S040Type'
+    '201':
+      $ref: '../../../common/responses.yaml#/201'
+    '400':
+      $ref: '../../../common/responses.yaml#/400'
+    '401':
+      $ref: '../../../common/responses.yaml#/401'
+    '403':
+      $ref: '../../../common/responses.yaml#/403'
+    '409':
+      $ref: '../../../common/responses.yaml#/409'
+    '500':
+      $ref: '../../../common/responses.yaml#/500'

@@ -1,0 +1,57 @@
+'201':
+  content: { }
+  description: >
+    Created. The request has been fulfilled, resulting in the creation of a new resource.
+
+'204':
+  content: { }
+  description: >
+    No content. The server successfully processed the request, and is not returning any content.
+
+'400':
+  content:
+    'application/json':
+      examples:
+        validation:
+          value:
+            timestamp: "2023-11-28T13:59:53.57164"
+            errors: [
+              {
+                "field": "initiellFagsak.fnr",
+                "defaultMessage": "must match \"^\\d{11}$\"",
+                "rejectedValue": "123"
+              },
+              {
+                "field": "initiellFagsak.fnr",
+                "defaultMessage": "size must be between 11 and 11",
+                "rejectedValue": "123"
+              }
+            ]
+          summary: Invalid request with constraint violations
+  description: >
+    Bad Request. The server cannot or will not process the request due to an apparent client error.
+
+'401':
+  content: { }
+  description: >
+    Unauthorized.
+
+'403':
+  content: { }
+  description: >
+    Forbidden.
+
+'404':
+  content: { }
+  description: >
+    Not found.
+
+'409':
+  content: { }
+  description: >
+    Conflict.
+
+'500':
+  content: { }
+  description: >
+    Internal server error.

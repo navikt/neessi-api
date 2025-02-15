@@ -1,0 +1,8 @@
+S040Type:
+  type: object
+  required:
+    - instanceIdentifier
+
+  properties:
+    instanceIdentifier:
+      $ref: '../../properties/documents.yaml#/instanceIdentifier'
