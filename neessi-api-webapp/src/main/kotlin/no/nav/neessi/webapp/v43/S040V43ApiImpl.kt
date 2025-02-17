@@ -1,8 +1,8 @@
-package no.nav.neessi.webapp
+package no.nav.neessi.webapp.v43
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
-import no.nav.neessi.openapi.api.S040Api
-import no.nav.neessi.openapi.model.S040Type
+import no.nav.neessi.openapi.api.v43.S040Api
+import no.nav.neessi.openapi.model.v43.S040Type
 
 import no.nav.security.token.support.core.api.Unprotected
 import org.springframework.http.HttpStatus
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController
 import java.util.*
 
 @RestController
-class S040ApiImpl : S040Api {
+class S040V43ApiImpl : S040Api {
 
     val log = logger {}
 

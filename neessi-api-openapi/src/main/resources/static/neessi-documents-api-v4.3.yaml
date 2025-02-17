@@ -18,5 +18,3 @@ tags:
 paths:
   '/v4.3/documents/s040/{documentId}':
     $ref: 'v4.3/documents/s040/operations_rot.yaml'
-  '/v4.4/documents/s040/{documentId}':
-    $ref: 'v4.4/documents/s040/operations_rot.yaml'
