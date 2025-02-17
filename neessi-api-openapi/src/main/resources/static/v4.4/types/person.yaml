@@ -1,0 +1,8 @@
+PersonType:
+  type: object
+  required:
+    - familyName
+
+  properties:
+    familyName:
+      $ref: '../properties/person.yaml#/familyName'

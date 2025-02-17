@@ -1,0 +1,11 @@
+institutionId:
+  type: string
+  description: The unique identifier of the institution.
+  example: "institutionId"
+
+institutionName:
+  type: string
+  description: The name of the institution.
+  example: "institutionName"
+  maxLength: 100
+  minLength: 1

@@ -13,7 +13,7 @@
 
     <properties>
         <documents.v4.3.spec>
-            ${project.basedir}/src/main/resources/static/neessi-documents-api-v4.3.yaml
+            ${project.basedir}/src/main/resources/static/neessi-documents-api.yaml
         </documents.v4.3.spec>
         <documents.v4.4.spec>
             ${project.basedir}/src/main/resources/static/neessi-documents-api-v4.4.yaml
@@ -51,27 +51,15 @@
                 <version>7.11.0</version>
                 <executions>
                     <execution>
-                        <id>openapi-v43-spring</id>
+                        <id>openapi-spring</id>
                         <phase>generate-sources</phase>
                         <goals>
                             <goal>generate</goal>
                         </goals>
                         <configuration>
                             <inputSpec>${documents.v4.3.spec}</inputSpec>
-                            <modelPackage>no.nav.neessi.openapi.v43.model</modelPackage>
-                            <apiPackage>no.nav.neessi.openapi.v43.api</apiPackage>
-                        </configuration>
-                    </execution>
-                    <execution>
-                        <id>openapi-v44-spring</id>
-                        <phase>generate-sources</phase>
-                        <goals>
-                            <goal>generate</goal>
-                        </goals>
-                        <configuration>
-                            <inputSpec>${documents.v4.3.spec}</inputSpec>
-                            <modelPackage>no.nav.neessi.openapi.v44.model</modelPackage>
-                            <apiPackage>no.nav.neessi.openapi.v44.api</apiPackage>
+                            <modelPackage>no.nav.neessi.openapi.model</modelPackage>
+                            <apiPackage>no.nav.neessi.openapi.api</apiPackage>
                         </configuration>
                     </execution>
                 </executions>
@@ -83,6 +71,7 @@
                         <interfaceOnly>true</interfaceOnly>
                         <serializableModel>true</serializableModel>
                         <useSpringBoot3>true</useSpringBoot3>
+                        <useTags>true</useTags>
                     </configOptions>
                 </configuration>
             </plugin>

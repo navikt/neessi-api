@@ -8,7 +8,7 @@ info:
   version: v4.3
 
 servers:
-  - url: '/api/v4.3/documents'
+  - url: '/api'
 
 tags:
   - name: "S040"
@@ -16,5 +16,7 @@ tags:
       Integrate with version 4.3 of the CDM framework
 
 paths:
-  '/s040/{documentId}':
+  '/v4.3/documents/s040/{documentId}':
     $ref: 'v4.3/documents/s040/operations_rot.yaml'
+  '/v4.4/documents/s040/{documentId}':
+    $ref: 'v4.4/documents/s040/operations_rot.yaml'

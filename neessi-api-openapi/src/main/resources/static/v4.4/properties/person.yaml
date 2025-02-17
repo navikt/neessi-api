@@ -1,0 +1,50 @@
+familyName:
+  type: string
+  description: The family name of the person.
+  example: "Doe"
+  maxLength: 100
+  minLength: 1
+
+forename:
+  type: string
+  description: The forename of the person.
+  example: "John"
+  maxLength: 100
+  minLength: 1
+
+dateBirth:
+  type: string
+  format: date
+  description: The date of birth of the person.
+  example: "1970-01-01"
+
+sex:
+  type: string
+  enum:
+    - "male"
+    - "female"
+    - "unknown"
+
+familyNameAtBirth:
+  type: string
+  description: The family name at birth of the person.
+  example: "Doe"
+  maxLength: 100
+  minLength: 1
+
+forenameAtBirth:
+  type: string
+  description: The forename at birth of the person.
+  example: "John"
+  maxLength: 100
+  minLength: 1
+
+pin:
+  type: string
+  description: The personal identification number of the person.
+  example: "1234567890"
+  maxLength: 100
+  minLength: 1
+
+nationality:
+  type: string
