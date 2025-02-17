@@ -1,7 +1,7 @@
 familyName:
   type: string
   description: The family name of the person.
-  example: "Doe"
+  example: "Jane"
   maxLength: 100
   minLength: 1
 
@@ -18,12 +18,13 @@ dateBirth:
   description: The date of birth of the person.
   example: "1970-01-01"
 
-sex:
+gender:
   type: string
   enum:
     - "male"
     - "female"
     - "unknown"
+  example: 'female'
 
 familyNameAtBirth:
   type: string
@@ -35,7 +36,7 @@ familyNameAtBirth:
 forenameAtBirth:
   type: string
   description: The forename at birth of the person.
-  example: "John"
+  example: "Jane"
   maxLength: 100
   minLength: 1
 
@@ -45,6 +46,3 @@ pin:
   example: "1234567890"
   maxLength: 100
   minLength: 1
-
-nationality:
-  type: string

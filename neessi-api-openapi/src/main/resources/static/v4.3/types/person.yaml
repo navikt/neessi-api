@@ -6,3 +6,19 @@ PersonType:
   properties:
     familyName:
       $ref: '../properties/person.yaml#/familyName'
+    forename:
+      $ref: '../properties/person.yaml#/forename'
+    dateBirth:
+      $ref: '../properties/person.yaml#/dateBirth'
+    gender:
+      $ref: '../properties/person.yaml#/gender'
+    familyNameAtBirth:
+      $ref: '../properties/person.yaml#/familyNameAtBirth'
+    forenameAtBirth:
+      $ref: '../properties/person.yaml#/forenameAtBirth'
+    pin:
+      $ref: '../types/pin.yaml#/PinType'
+    address:
+      $ref: '../types/address.yaml#/AddressType'
+    nationality:
+      $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'

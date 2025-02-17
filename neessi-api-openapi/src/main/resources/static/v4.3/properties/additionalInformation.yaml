@@ -1,0 +1,6 @@
+additionalInformation:
+  type: string
+  minLength: 1
+  maxLength: 500
+  description: Additional information
+  example: "Additional information from the user"

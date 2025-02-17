@@ -2,7 +2,56 @@ S040Type:
   type: object
   required:
     - person
-
   properties:
     person:
       $ref: '../../types/person.yaml#/PersonType'
+    request:
+      $ref: '#/S040RequestType'
+    additionalInformation:
+      $ref: '../../properties/additionalInformation.yaml#/additionalInformation'
+    birthPlace:
+      $ref: '../../types/birthPlace.yaml#/BirthPlaceType'
+    father:
+      $ref: '../../types/parent.yaml#/ParentType'
+    mother:
+      $ref: '../../types/parent.yaml#/ParentType'
+    residenceInCountrySince:
+      type: date
+      description: >
+        The date the person has been living in the country since. The country refers to
+        the country indicated by the persons address.
+
+S040RequestType:
+  type: object
+  properties:
+    actingCompetentInstitutionWhoseLegislation:
+      type: string
+      example: "Text"
+    typeBenefitConcerned:
+      type: string
+      enum:
+        - "sickness"
+        - "maternity"
+        - "paternity"
+      example: 'sickness'
+    natureBenefitConcerned:
+      type: string
+      enum:
+        - "in-cash"
+        - "in-kind"
+      example: 'in-cash'
+    fixedPeriodConcernedStartDate:
+      type: date
+      example: '2020-01-01'
+    fixedPeriodConcernedEndDate:
+      type: date
+      example: '2021-01-01'
+    openPeriodConcernedType:
+      type: string
+      enum:
+        - "open-ended"
+        - "end-date-unknown"
+      example: 'open-ended'
+    openPeriodConcernedStartDate:
+      type: date
+      example: '2020-01-01'

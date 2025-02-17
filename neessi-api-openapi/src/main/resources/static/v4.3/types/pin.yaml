@@ -1,0 +1,14 @@
+PinType:
+  type: object
+  required:
+    - pin
+
+  properties:
+    pin:
+      $ref: '../properties/person.yaml#/pin'
+    sector:
+      $ref: '../properties/sector.yaml#/sector'
+    countryCode:
+      $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
+    institutionId:
+      $ref: '../properties/institution.yaml#/institutionId'

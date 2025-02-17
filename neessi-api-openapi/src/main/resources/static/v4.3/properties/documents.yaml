@@ -2,3 +2,15 @@ instanceIdentifier:
   type: string
   format: uuid
   description: Unique identifier for the document
+  example: "00000000-0000-0000-0000-000000000001"
+
+setId:
+  type: string
+  format: uuid
+  description: The unique identifier of the set.
+  example: "00000000-0000-0000-0000-000000000001"
+
+version:
+  type: string
+  description: The version of the document.
+  example: "1"

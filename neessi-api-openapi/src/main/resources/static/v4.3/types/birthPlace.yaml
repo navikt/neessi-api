@@ -1,0 +1,9 @@
+BirthPlaceType:
+  type: object
+  properties:
+    town:
+      $ref: '../properties/address.yaml#/town'
+    region:
+      $ref: '../properties/address.yaml#/region'
+    countryCode:
+      $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'

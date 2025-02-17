@@ -1,0 +1,5 @@
+sector:
+  type: string
+  description: The sector
+  maxLength: 100
+  minLength: 1

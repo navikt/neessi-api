@@ -1,0 +1,30 @@
+street:
+  type: string
+  description: The street name
+  minLength: 1
+  maxLength: 150
+  example: "Hauptstrasse 1"
+
+buildingName:
+  type: string
+  minLength: 1
+  maxLength: 150
+  example: "Building A"
+
+town:
+  type: string
+  minLength: 1
+  maxLength: 65
+  example: "Berlin"
+
+postalCode:
+  type: string
+  minLength: 1
+  maxLength: 25
+  example: "10115"
+
+region:
+  type: string
+  minLength: 1
+  maxLength: 65
+  example: "Berlin"

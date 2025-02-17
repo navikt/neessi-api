@@ -4,7 +4,7 @@ get:
   summary: Retrieve s040 in CDM version 4.3
   description: Retrieve s040 in CDM version 4.3
   parameters:
-    - name: instanceIdentifier
+    - name: setId
       in: path
       required: true
       schema:

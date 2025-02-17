@@ -1,0 +1,15 @@
+AddressType:
+  type: object
+  properties:
+    street:
+      $ref: '../properties/address.yaml#/street'
+    buildingName:
+      $ref: '../properties/address.yaml#/buildingName'
+    town:
+      $ref: '../properties/address.yaml#/town'
+    postalCode:
+      $ref: '../properties/address.yaml#/postalCode'
+    region:
+      $ref: '../properties/address.yaml#/region'
+    countryCode:
+      $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
