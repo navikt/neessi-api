@@ -3,7 +3,6 @@ package no.nav.neessi.webapp.v43
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.neessi.openapi.api.v43.S040Api
 import no.nav.neessi.openapi.model.v43.S040Type
-
 import no.nav.security.token.support.core.api.Unprotected
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -16,8 +15,10 @@ class S040V43ApiImpl : S040Api {
     val log = logger {}
 
     @Unprotected
-    override fun getS040v43(instanceIdentifier: UUID): ResponseEntity<S040Type> {
-        log.info { "heio" }
+    override fun getS040v43(
+        setId: UUID,
+        version: String
+    ): ResponseEntity<S040Type> {
         return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
     }
 

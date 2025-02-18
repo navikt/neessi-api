@@ -1,4 +1,8 @@
 spring:
+  web:
+    resources:
+      cache:
+        period: 1
 
   main:
     banner-mode: "off"

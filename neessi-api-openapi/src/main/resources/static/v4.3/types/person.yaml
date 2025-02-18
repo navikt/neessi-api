@@ -2,7 +2,9 @@ PersonType:
   type: object
   required:
     - familyName
-
+    - forename
+    - dateBirth
+    - sex
   properties:
     familyName:
       $ref: '../properties/person.yaml#/familyName'
@@ -10,15 +12,43 @@ PersonType:
       $ref: '../properties/person.yaml#/forename'
     dateBirth:
       $ref: '../properties/person.yaml#/dateBirth'
-    gender:
-      $ref: '../properties/person.yaml#/gender'
+    sex:
+      $ref: '../properties/person.yaml#/sex'
     familyNameAtBirth:
       $ref: '../properties/person.yaml#/familyNameAtBirth'
     forenameAtBirth:
       $ref: '../properties/person.yaml#/forenameAtBirth'
     pin:
       $ref: '../types/pin.yaml#/PinType'
-    address:
-      $ref: '../types/address.yaml#/AddressType'
     nationality:
       $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
+    birthPlace:
+      $ref: '../types/birthPlace.yaml#/BirthPlaceType'
+    father:
+      $ref: '../types/parent.yaml#/ParentType'
+    mother:
+      $ref: '../types/parent.yaml#/ParentType'
+
+PersonWithAddressType:
+  type: object
+  allOf:
+    - $ref: "#/PersonType"
+    - type: object
+      required:
+        - address
+      properties:
+        address:
+          $ref: '../types/address.yaml#/AddressType'
+
+PersonWithAddressesType:
+  type: object
+  allOf:
+    - $ref: "#/PersonType"
+    - type: object
+      required:
+        - addresses
+      properties:
+        addresses:
+          type: array
+          items:
+            $ref: '../types/address.yaml#/AddressType'

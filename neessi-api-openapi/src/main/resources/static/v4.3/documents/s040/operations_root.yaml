@@ -9,6 +9,11 @@ get:
       required: true
       schema:
         $ref: '../../properties/documents.yaml#/instanceIdentifier'
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: '../../properties/documents.yaml#/version'
   operationId: getS040v43
   responses:
     '200':
@@ -17,6 +22,41 @@ get:
         'application/json':
           schema:
             $ref: 'model.yaml#/S040Type'
+    '400':
+      $ref: '../../../common/responses.yaml#/400'
+    '401':
+      $ref: '../../../common/responses.yaml#/401'
+    '403':
+      $ref: '../../../common/responses.yaml#/403'
+    '409':
+      $ref: '../../../common/responses.yaml#/409'
+    '500':
+      $ref: '../../../common/responses.yaml#/500'
+
+put:
+  tags:
+    - "S040"
+  summary: Update s040 in CDM version 4.3
+  description: Updates s040 in CDM version 4.3
+  parameters:
+    - name: setId
+      in: path
+      required: true
+      schema:
+        $ref: '../../properties/documents.yaml#/instanceIdentifier'
+    - name: version
+      in: path
+      required: true
+      schema:
+        $ref: '../../properties/documents.yaml#/version'
+  requestBody:
+    required: true
+    content:
+      'application/json':
+        schema:
+          $ref: 'model.yaml#/S040Type'
+  operationId: putS040v43
+  responses:
     '201':
       $ref: '../../../common/responses.yaml#/201'
     '400':

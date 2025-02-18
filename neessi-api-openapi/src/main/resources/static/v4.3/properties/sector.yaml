@@ -1,5 +1,13 @@
 sector:
   type: string
-  description: The sector
+  description: >
+    Valid values are 
+      * 'sickness' - Sickness benefits, value `01` in EESSI
+      * 'pensions' - Pensions benefits, value `02` in EESSI
   maxLength: 100
   minLength: 1
+  enum:
+    - "sickness"
+    - "pensions"
+  example: 'sickness'
+```

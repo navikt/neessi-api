@@ -2,7 +2,7 @@ PinType:
   type: object
   required:
     - pin
-
+    - countryCode
   properties:
     pin:
       $ref: '../properties/person.yaml#/pin'

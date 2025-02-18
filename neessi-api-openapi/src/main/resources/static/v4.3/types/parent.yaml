@@ -1,8 +1,5 @@
 ParentType:
   type: object
-  required:
-    - familyName
-
   properties:
     forename:
       $ref: '../properties/person.yaml#/forename'

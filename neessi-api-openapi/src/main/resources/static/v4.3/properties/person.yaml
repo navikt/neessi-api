@@ -18,7 +18,7 @@ dateBirth:
   description: The date of birth of the person.
   example: "1970-01-01"
 
-gender:
+sex:
   type: string
   enum:
     - "male"

@@ -1,5 +1,8 @@
 AddressType:
   type: object
+  required:
+    - town
+    - countryCode
   properties:
     street:
       $ref: '../properties/address.yaml#/street'

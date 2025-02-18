@@ -4,37 +4,34 @@ S040Type:
     - person
   properties:
     person:
-      $ref: '../../types/person.yaml#/PersonType'
-    request:
-      $ref: '#/S040RequestType'
-    additionalInformation:
-      $ref: '../../properties/additionalInformation.yaml#/additionalInformation'
-    birthPlace:
-      $ref: '../../types/birthPlace.yaml#/BirthPlaceType'
-    father:
-      $ref: '../../types/parent.yaml#/ParentType'
-    mother:
-      $ref: '../../types/parent.yaml#/ParentType'
+      $ref: '../../types/person.yaml#/PersonWithAddressType'
     residenceInCountrySince:
       type: date
       description: >
         The date the person has been living in the country since. The country refers to
         the country indicated by the persons address.
+    request:
+      $ref: '#/S040RequestType'
+    additionalInformation:
+      $ref: '../../properties/additionalInformation.yaml#/additionalInformation'
 
 S040RequestType:
   type: object
+  required:
+    - typeOfBenefitConcerned
+    - natureOfBenefitConcerned
   properties:
     actingCompetentInstitutionWhoseLegislation:
       type: string
       example: "Text"
-    typeBenefitConcerned:
+    typeOfBenefitConcerned:
       type: string
       enum:
         - "sickness"
         - "maternity"
         - "paternity"
       example: 'sickness'
-    natureBenefitConcerned:
+    natureOfBenefitConcerned:
       type: string
       enum:
         - "in-cash"
