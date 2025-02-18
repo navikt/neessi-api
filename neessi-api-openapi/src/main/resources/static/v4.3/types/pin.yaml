@@ -12,3 +12,9 @@ PinType:
       $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
     institutionId:
       $ref: '../properties/institution.yaml#/institutionId'
+  description: >
+    The personal identification number of the person. Although the PIN is optional for some documents 
+    it is strongly advised to add information in this section, not only for the receiving 
+    institution but also for the sending institution. This will make the process significantly 
+    easier to complete successfully. Exceptions should be made only for the rare cases where the 
+    PIN in the sending country is not known or doesn't exist.

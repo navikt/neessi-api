@@ -18,7 +18,7 @@ dateBirth:
   description: The date of birth of the person.
   example: "1970-01-01"
 
-sex:
+sexEnumType:
   type: string
   enum:
     - "male"
@@ -28,21 +28,30 @@ sex:
 
 familyNameAtBirth:
   type: string
-  description: The family name at birth of the person.
+  description: >
+    The family name at birth of the person. State the family name(s) of the person 
+    at birth if different from the current family name(s).
   example: "Doe"
   maxLength: 100
   minLength: 1
 
 forenameAtBirth:
   type: string
-  description: The forename at birth of the person.
+  description: >
+    The forename at birth of the person. State the forename(s) of the 
+    person at birth if different from current forename(s).
   example: "Jane"
   maxLength: 100
   minLength: 1
 
 pin:
   type: string
-  description: The personal identification number of the person.
+  description: >
+    The personal identification number of the person. Although the PIN is optional 
+    it is strongly advised to add information in this section, not only for the receiving 
+    institution but also for the sending institution. This will make the process significantly 
+    easier to complete successfully. Exceptions should be made only for the rare cases where the 
+    PIN in the sending country is not known or doesn't exist.
   example: "1234567890"
   maxLength: 100
   minLength: 1

@@ -24,14 +24,14 @@ S040RequestType:
     actingCompetentInstitutionWhoseLegislation:
       type: string
       example: "Text"
-    typeOfBenefitConcerned:
+    typeOfBenefitConcernedEnumType:
       type: string
       enum:
         - "sickness"
         - "maternity"
         - "paternity"
       example: 'sickness'
-    natureOfBenefitConcerned:
+    natureOfBenefitConcernedEnumType:
       type: string
       enum:
         - "in-cash"
@@ -43,7 +43,7 @@ S040RequestType:
     fixedPeriodConcernedEndDate:
       type: date
       example: '2021-01-01'
-    openPeriodConcernedType:
+    openPeriodConcernedEnumType:
       type: string
       enum:
         - "open-ended"

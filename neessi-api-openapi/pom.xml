@@ -84,6 +84,7 @@
                         <serializableModel>true</serializableModel>
                         <useSpringBoot3>true</useSpringBoot3>
                         <useTags>true</useTags>
+                        <enumPropertyNaming>UPPERCASE</enumPropertyNaming>
                     </configOptions>
                 </configuration>
             </plugin>

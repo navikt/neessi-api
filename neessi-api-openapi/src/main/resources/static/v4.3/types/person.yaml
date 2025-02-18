@@ -13,7 +13,7 @@ PersonType:
     dateBirth:
       $ref: '../properties/person.yaml#/dateBirth'
     sex:
-      $ref: '../properties/person.yaml#/sex'
+      $ref: '../properties/person.yaml#/sexEnumType'
     familyNameAtBirth:
       $ref: '../properties/person.yaml#/familyNameAtBirth'
     forenameAtBirth:
@@ -21,13 +21,16 @@ PersonType:
     pin:
       $ref: '../types/pin.yaml#/PinType'
     nationality:
-      $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
+      type: array
+      items:
+        $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
     birthPlace:
       $ref: '../types/birthPlace.yaml#/BirthPlaceType'
     father:
       $ref: '../types/parent.yaml#/ParentType'
     mother:
       $ref: '../types/parent.yaml#/ParentType'
+
 
 PersonWithAddressType:
   type: object

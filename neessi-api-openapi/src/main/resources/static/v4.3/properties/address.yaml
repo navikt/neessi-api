@@ -28,3 +28,18 @@ region:
   minLength: 1
   maxLength: 65
   example: "Berlin"
+
+addressEnumType:
+  type: string
+  description: >
+    Valid values are 
+      * 'residence' - Residence address, `01` in the EESSI framework
+      * 'stay' - Stay address, `02` in the EESSI framework
+      * 'contact' - Postal address, `03` in the EESSI framework
+  maxLength: 100
+  minLength: 1
+  enum:
+    - "residence"
+    - "stay"
+    - "contact"
+  example: 'residence'
