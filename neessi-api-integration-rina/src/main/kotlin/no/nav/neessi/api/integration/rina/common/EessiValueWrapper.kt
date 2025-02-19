@@ -15,4 +15,6 @@ val EessiValue?.valueWrapper
 val List<String>?.valueWrapper
     get() =
         if (this != null)
-            EessiValueWrapper()
+            EessiValueWrapper(this)
+        else
+            null

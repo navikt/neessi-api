@@ -9,6 +9,10 @@ application:
   eux-neessi:
     name: eux-neessi-q2
     namespace: eessibasis
+  user-secret: eux-rina-terminator-api-q2
+
+rina:
+  endpoint: rina-ss1-q.adeo.no
 
 cluster:
   fss: dev-fss

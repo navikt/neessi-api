@@ -5,7 +5,7 @@ import no.nav.neessi.api.integration.rina.common.EessiValueWrapper
 import no.nav.neessi.api.integration.rina.common.eessiAdditionalInformation
 import no.nav.neessi.api.integration.rina.common.valueWrapper
 
-val S040.cpiModel: S040CpiRoot
+val S040.cpiRootModel: S040CpiRoot
     get() = S040CpiRoot(
         s040 = s040Cpi
     )

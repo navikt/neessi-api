@@ -52,3 +52,12 @@ spec:
     autoInstrumentation:
       enabled: true
       runtime: java
+  env:
+    - name: RINA_ENDPOINT
+      value: https://{{ rina.endpoint }}
+  envFrom:
+    - secret: {{ application.user-secret }}
+  accessPolicy:
+    outbound:
+      external:
+        - host: {{ rina.endpoint }}

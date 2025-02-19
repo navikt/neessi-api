@@ -1,7 +1,7 @@
 package no.nav.neessi.api.integration.rina.client
 
 import no.nav.model.v43.S040
-import no.nav.neessi.api.integration.rina.v43.documents.s040.toCpiModel
+import no.nav.neessi.api.integration.rina.v43.documents.s040.cpiRootModel
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestClient
 
@@ -11,7 +11,7 @@ class CpiClient(
 ) {
 
     fun put(sO40: S040) {
-        put(sO40.toCpiModel()!!)
+        put(sO40.cpiRootModel)
     }
 
     private fun put(any: Any) =
