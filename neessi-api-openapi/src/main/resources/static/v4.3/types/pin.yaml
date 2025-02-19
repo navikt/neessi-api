@@ -7,7 +7,7 @@ PinType:
     pin:
       $ref: '../properties/person.yaml#/pin'
     sector:
-      $ref: '../properties/sector.yaml#/sector'
+      $ref: '../properties/sector.yaml#/sectorEnumType'
     countryCode:
       $ref: '../properties/country.yaml#/countryCodeIso3166-1alpha3'
     institutionId:

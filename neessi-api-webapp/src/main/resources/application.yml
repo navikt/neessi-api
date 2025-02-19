@@ -12,6 +12,14 @@ logging:
     format:
       console: logstash
 
+no.nav.eux.rina:
+  cpi:
+    rinaBaseUrl: ${RINA_ENDPOINT}
+
+credentials:
+  username: ${CPI_USERNAME}
+  password: ${CPI_PASSWORD}
+
 # noinspection SpringBootApplicationYaml
 no.nav.security.jwt:
   issuer:

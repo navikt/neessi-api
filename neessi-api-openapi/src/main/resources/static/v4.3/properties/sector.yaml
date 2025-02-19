@@ -1,4 +1,4 @@
-sector:
+sectorEnumType:
   type: string
   description: >
     Valid values are 

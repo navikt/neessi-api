@@ -14,7 +14,7 @@
         <module>neessi-api-model</module>
         <module>neessi-api-service</module>
         <module>neessi-api-openapi</module>
-        <module>neessi-api-rina-integration</module>
+        <module>neessi-api-integration-rina</module>
     </modules>
 
     <parent>
