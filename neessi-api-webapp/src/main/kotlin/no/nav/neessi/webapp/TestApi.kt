@@ -89,7 +89,7 @@ class TestApi(
         @Parameter(description = "", required = true) @RequestBody
         payload: TestPayload
     ): ResponseEntity<String> {
-        val body = cpiClient.getTest(payload)
+        val body = cpiClient.putTest(payload)
         return ResponseEntity(body, HttpStatusCode.valueOf(200))
     }
 

@@ -21,7 +21,7 @@ class CpiClient(
         log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
         return cpiRestClient
             .post()
-            .uri("/eessiRest/$payload")
+            .uri("/eessiRest/$uri")
             .body(payload.payload)
             .retrieve()
             .toEntity<String>()
@@ -30,10 +30,10 @@ class CpiClient(
 
     fun getTest(payload: TestPayload): String {
         val uri = payload.path
-        log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
+        log.info { "Sending test: ${properties.rinaBaseUrl}/eessiRest/$uri" }
         return cpiRestClient
             .get()
-            .uri("/eessiRest/$payload")
+            .uri("/eessiRest/$uri")
             .retrieve()
             .toEntity<String>()
             .body!!
@@ -44,7 +44,7 @@ class CpiClient(
         log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
         return cpiRestClient
             .put()
-            .uri("/eessiRest/$payload")
+            .uri("/eessiRest/$uri")
             .body(payload.payload)
             .retrieve()
             .toEntity<String>()
