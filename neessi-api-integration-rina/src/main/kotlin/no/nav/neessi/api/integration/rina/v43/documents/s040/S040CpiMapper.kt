@@ -65,7 +65,8 @@ val Pin.pinPersonInEachInstitution: S040Cpi.PINPersonInEachInstitution
 
 val Pin.personalIdentificationNumber: S040Cpi.PersonalIdentificationNumber
     get() = S040Cpi.PersonalIdentificationNumber(
-        country = this.countryCode.valueWrapper(),
+        //TODO country shit
+        country = "NO".valueWrapper(),
         personalIdentificationNumber = this.pin,
         sector = this.sector.valueWrapper,
         institution = this.institution
