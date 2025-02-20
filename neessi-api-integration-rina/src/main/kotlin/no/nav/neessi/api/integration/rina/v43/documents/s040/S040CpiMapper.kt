@@ -76,7 +76,7 @@ val Pin.institution: S040Cpi.Institution?
     get() = S040Cpi.Institution(
         institutionID = this.institutionId,
         //TODO må mappes
-        institutionName = "Inst name"
+        institutionName = "NAV ACC 01"
     )
 
 val S040.ifPINNotProvidedForEveryInstitutionPleaseProvide
