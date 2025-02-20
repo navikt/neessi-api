@@ -29,6 +29,18 @@ class CpiClient(
             .body!!
     }
 
+    fun getTest(payload: TestPayload): String {
+        val uri = payload.path
+        log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
+        log.info { }
+        return cpiRestClient
+            .get()
+            .uri("/eessiRest/$payload")
+            .retrieve()
+            .toEntity<String>()
+            .body!!
+    }
+
     fun put(sO40: S040) {
         put(sO40.cpiRootModel)
     }
