@@ -1,5 +1,5 @@
 internationalId:
   type: string
-  format: uuid
+#  format: uuid
   description: Unique identifier for the document
   example: "00000000-0000-0000-0000-000000000001"

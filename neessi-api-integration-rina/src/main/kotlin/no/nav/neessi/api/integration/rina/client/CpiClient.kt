@@ -4,6 +4,7 @@ import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.model.v43.S040
 import no.nav.neessi.api.integration.rina.config.RinaCpiServiceProperties
 import no.nav.neessi.api.integration.rina.v43.documents.s040.cpiRootModel
+import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestClient
 import org.springframework.web.client.toEntity
@@ -30,10 +31,11 @@ class CpiClient(
 
     fun getTest(payload: TestPayload): String {
         val uri = payload.path
-        log.info { "Sending test: ${properties.rinaBaseUrl}/eessiRest/$uri" }
+        log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
         return cpiRestClient
             .get()
-            .uri("/eessiRest/$uri")
+            .uri(uri)
+            .accept(APPLICATION_JSON)
             .retrieve()
             .toEntity<String>()
             .body!!
@@ -44,7 +46,7 @@ class CpiClient(
         log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }
         return cpiRestClient
             .put()
-            .uri("/eessiRest/$uri")
+            .uri(uri)
             .body(payload.payload)
             .retrieve()
             .toEntity<String>()
@@ -58,7 +60,7 @@ class CpiClient(
     private fun put(any: Any) =
         cpiRestClient
             .put()
-            .uri("/eessiRest/Cases/")
+            .uri("/Cases/")
             .body(any)
             .retrieve()
 

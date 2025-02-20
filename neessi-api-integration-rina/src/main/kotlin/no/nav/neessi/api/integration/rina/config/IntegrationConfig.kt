@@ -14,7 +14,7 @@ class IntegrationConfig {
     ) =
         RestClient
             .builder()
-            .baseUrl(properties.rinaBaseUrl)
+            .baseUrl("${properties.rinaBaseUrl}/eessiRest/")
             .requestInterceptor(interceptor)
             .build()
 

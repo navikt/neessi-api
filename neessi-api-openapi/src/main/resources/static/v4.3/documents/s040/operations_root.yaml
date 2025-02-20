@@ -4,16 +4,16 @@ get:
   summary: Retrieve s040 in CDM version 4.3
   description: Retrieve s040 in CDM version 4.3
   parameters:
-    - name: setId
+    - name: documentId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/instanceIdentifier'
-    - name: version
+        $ref: '../../properties/documents.yaml#/documentId'
+    - name: internationalId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/version'
+        $ref: '../../properties/cases.yaml#/internationalId'
   operationId: getS040v43
   responses:
     '200':
@@ -39,16 +39,16 @@ put:
   summary: Update s040 in CDM version 4.3
   description: Updates s040 in CDM version 4.3
   parameters:
-    - name: setId
+    - name: documentId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/instanceIdentifier'
-    - name: version
+        $ref: '../../properties/documents.yaml#/documentId'
+    - name: internationalId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/version'
+        $ref: '../../properties/cases.yaml#/internationalId'
   requestBody:
     required: true
     content:

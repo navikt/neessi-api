@@ -4,6 +4,12 @@ instanceIdentifier:
   description: Unique identifier for the document
   example: "00000000-0000-0000-0000-000000000001"
 
+documentId:
+  type: string
+  format: uuid
+  description: Unique identifier for the document
+  example: "00000000-0000-0000-0000-000000000001"
+
 setId:
   type: string
   format: uuid

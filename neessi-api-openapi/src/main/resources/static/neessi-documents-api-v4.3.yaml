@@ -16,5 +16,5 @@ tags:
       Integrate with version 4.3 of the CDM framework
 
 paths:
-  '/v4.3/documents/s040/{setId}/versions/{version}':
+  '/v4.3/cases/{internationalId}/documents/s040/{documentId}':
     $ref: 'v4.3/documents/s040/operations_root.yaml'
