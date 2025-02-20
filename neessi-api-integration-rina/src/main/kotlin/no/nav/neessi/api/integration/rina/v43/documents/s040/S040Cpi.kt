@@ -96,7 +96,7 @@ data class S040Cpi(
         val town: String?,
         val postalCode: String?,
         val region: String?,
-        val country: String?
+        val country: EessiValueWrapper?
     )
 
     data class Request(

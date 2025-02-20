@@ -75,7 +75,7 @@ val Pin.institution: S040Cpi.Institution?
     get() = S040Cpi.Institution(
         institutionID = this.institutionId,
         //TODO må mappes
-        institutionName = null
+        institutionName = "Inst name"
     )
 
 val S040.ifPINNotProvidedForEveryInstitutionPleaseProvide
@@ -91,7 +91,8 @@ val BirthPlace.placeBirth: S040Cpi.PlaceBirth
     get() = S040Cpi.PlaceBirth(
         town = town,
         region = region,
-        country = countryCode?.valueWrapper()
+        //TODO fix country shit
+        country = "NO"?.valueWrapper()
     )
 
 val S040.additionalInformationPerson: S040Cpi.AdditionalInformationPerson?
@@ -113,5 +114,6 @@ val Address.cpiAddress: S040Cpi.Address
         town = town,
         postalCode = postalCode,
         region = region,
-        country = countryCode,
+        //TODO fix country shit
+        country = "NO".valueWrapper(),
     )
