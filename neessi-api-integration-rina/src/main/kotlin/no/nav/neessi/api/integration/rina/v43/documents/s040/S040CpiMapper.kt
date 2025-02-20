@@ -59,7 +59,7 @@ val S040.personIdentification: S040Cpi.PersonIdentification
 
 val Pin.pinPersonInEachInstitution: S040Cpi.PINPersonInEachInstitution
     get() = S040Cpi.PINPersonInEachInstitution(
-        //TODO skal være liste
+        //TODO skal være listefix fix
         personalIdentificationNumber = listOf(this.personalIdentificationNumber)
     )
 
