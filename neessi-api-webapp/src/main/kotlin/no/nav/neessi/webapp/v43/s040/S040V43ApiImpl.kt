@@ -33,7 +33,7 @@ class S040V43ApiImpl(
         s040Type: S040Type
     ): ResponseEntity<Unit> {
         val s040 = s040Type.toS040()
-        s040V43Service.put(internationalId, documentId, "s040", s040)
+        s040V43Service.put(internationalId, documentId, "S040", s040)
         return ResponseEntity(HttpStatus.OK)
     }
 
