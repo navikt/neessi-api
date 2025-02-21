@@ -9,7 +9,7 @@ data class Person(
     val sex: Sex,
     val familyNameAtBirth: String? = null,
     val forenameAtBirth: String? = null,
-    val pin: Pin? = null,
+    val pin: List<Pin>? = null,
     val nationality: List<String>? = null,
     val birthPlace: BirthPlace? = null,
     val father: Parent? = null,

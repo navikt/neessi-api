@@ -3,7 +3,7 @@ package no.nav.neessi.api.integration.rina.client
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.model.v43.S040
 import no.nav.neessi.api.integration.rina.config.RinaCpiServiceProperties
-import no.nav.neessi.api.integration.rina.v43.documents.s040.cpiRootModel
+import no.nav.neessi.api.integration.rina.model.v43.documents.s040.cpiRootModel
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestClient

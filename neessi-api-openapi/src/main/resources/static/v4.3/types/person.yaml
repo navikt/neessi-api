@@ -19,7 +19,9 @@ PersonType:
     forenameAtBirth:
       $ref: '../properties/person.yaml#/forenameAtBirth'
     pin:
-      $ref: '../types/pin.yaml#/PinType'
+      type: array
+      items:
+        $ref: '../types/pin.yaml#/PinType'
     nationality:
       type: array
       items:

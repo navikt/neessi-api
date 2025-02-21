@@ -2,7 +2,7 @@ package no.nav.neessi.api.integration.rina.service
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.model.v43.S040
-import no.nav.neessi.api.integration.rina.v43.documents.s040.cpiRootModel
+import no.nav.neessi.api.integration.rina.model.v43.documents.s040.cpiRootModel
 import org.springframework.stereotype.Service
 import java.util.*
 

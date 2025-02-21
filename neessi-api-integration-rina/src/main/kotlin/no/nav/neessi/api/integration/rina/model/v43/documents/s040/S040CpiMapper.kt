@@ -1,8 +1,8 @@
-package no.nav.neessi.api.integration.rina.v43.documents.s040
+package no.nav.neessi.api.integration.rina.model.v43.documents.s040
 
 import no.nav.model.v43.*
-import no.nav.neessi.api.integration.rina.common.EessiValueWrapper
 import no.nav.neessi.api.integration.rina.common.eessiAdditionalInformation
+import no.nav.neessi.api.integration.rina.common.rinaCountryCodeValueWrapper
 import no.nav.neessi.api.integration.rina.common.valueWrapper
 
 val S040.cpiRootModel: S040CpiRoot
@@ -57,22 +57,20 @@ val S040.personIdentification: S040Cpi.PersonIdentification
         ifPinNotProvidedForEveryInstitutionPleaseProvide = ifPINNotProvidedForEveryInstitutionPleaseProvide
     )
 
-val Pin.pinPersonInEachInstitution: S040Cpi.PINPersonInEachInstitution
+val List<Pin>.pinPersonInEachInstitution: S040Cpi.PINPersonInEachInstitution
     get() = S040Cpi.PINPersonInEachInstitution(
-        //TODO skal være listefix fix
-        personalIdentificationNumber = listOf(this.personalIdentificationNumber)
+        personalIdentificationNumber = map { it.personalIdentificationNumber }
     )
 
 val Pin.personalIdentificationNumber: S040Cpi.PersonalIdentificationNumber
     get() = S040Cpi.PersonalIdentificationNumber(
-        //TODO country shit
-        country = "NO".valueWrapper(),
-        personalIdentificationNumber = this.pin,
-        sector = this.sector.valueWrapper,
-        institution = this.institution
+        country = countryCode.rinaCountryCodeValueWrapper,
+        personalIdentificationNumber = pin,
+        sector = sector.valueWrapper,
+        institution = institution
     )
 
-val Pin.institution: S040Cpi.Institution?
+val Pin.institution: S040Cpi.Institution
     get() = S040Cpi.Institution(
         institutionID = this.institutionId,
         //TODO må mappes
@@ -81,25 +79,23 @@ val Pin.institution: S040Cpi.Institution?
 
 val S040.ifPINNotProvidedForEveryInstitutionPleaseProvide
     get() = S040Cpi.IfPINNotProvidedForEveryInstitutionPleaseProvide(
-        placeBirth = this.person.birthPlace?.placeBirth,
-        fatherFamilyNameAtBirth = this.person.father?.familyNameAtBirth,
-        forenameFather = this.person.father?.forename,
-        motherFamilyNameAtBirth = this.person.mother?.familyNameAtBirth,
-        forenameMother = this.person.mother?.forename,
+        placeBirth = person.birthPlace?.placeBirth,
+        fatherFamilyNameAtBirth = person.father?.familyNameAtBirth,
+        forenameFather = person.father?.forename,
+        motherFamilyNameAtBirth = person.mother?.familyNameAtBirth,
+        forenameMother = person.mother?.forename,
     )
 
 val BirthPlace.placeBirth: S040Cpi.PlaceBirth
     get() = S040Cpi.PlaceBirth(
         town = town,
         region = region,
-        //TODO fix country shit
-        country = "NO"?.valueWrapper()
+        country = countryCode?.rinaCountryCodeValueWrapper
     )
 
-val S040.additionalInformationPerson: S040Cpi.AdditionalInformationPerson?
+val S040.additionalInformationPerson: S040Cpi.AdditionalInformationPerson
     get() = S040Cpi.AdditionalInformationPerson(
-        //TODO må mappes
-        nationality = EessiValueWrapper(listOf("NO"))
+        nationality = person.nationality.rinaCountryCodeValueWrapper
     )
 
 val S040.addressPerson: S040Cpi.AddressPerson
@@ -115,6 +111,5 @@ val Address.cpiAddress: S040Cpi.Address
         town = town,
         postalCode = postalCode,
         region = region,
-        //TODO fix country shit
-        country = "NO".valueWrapper(),
+        country = countryCode.rinaCountryCodeValueWrapper,
     )

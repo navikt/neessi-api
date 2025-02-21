@@ -1,4 +1,4 @@
-package no.nav.neessi.api.integration.rina.v43.documents.s040
+package no.nav.neessi.api.integration.rina.model.v43.documents.s040
 
 import com.fasterxml.jackson.annotation.JsonFormat
 import com.fasterxml.jackson.annotation.JsonProperty
