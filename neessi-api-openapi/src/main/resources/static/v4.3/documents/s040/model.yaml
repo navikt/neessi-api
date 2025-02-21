@@ -10,6 +10,7 @@ S040Type:
       description: >
         The date the person has been living in the country since. The country refers to
         the country indicated by the persons address.
+      example: "2020-01-01"
     request:
       $ref: '#/S040RequestType'
     additionalInformation:

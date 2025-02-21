@@ -1,7 +1,7 @@
 institutionId:
   type: string
   description: The unique identifier of the institution.
-  example: "NO:NAVAT:07"
+  example: "NO:NAVAT07"
 
 institutionName:
   type: string

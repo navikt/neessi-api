@@ -21,7 +21,7 @@ class RinaIntegrationService(
         log.info { "Found caseId ${rinaCase.id} for $internationalId" }
         val action = rinaCase.getAction("Update", sedType)
         log.info { "found action ${action.id} for $internationalId" }
-        actionsClient.documentAction(rinaCase.id, action.id, document)
+        actionsClient.documentAction(rinaCase.id, action.id, document.rinaModel)
         log.info { "Successfully performed action for $internationalId" }
     }
 

@@ -1,7 +1,7 @@
 package no.nav.neessi.webapp.v43.s040
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
-import no.nav.neessi.api.service.documents.v43.s040.S040V43Service
+import no.nav.neessi.api.service.documents.DocumentService
 import no.nav.neessi.openapi.api.v43.S040Api
 import no.nav.neessi.openapi.model.v43.S040Type
 import no.nav.neessi.webapp.v43.mapper.toS040
@@ -13,7 +13,7 @@ import java.util.*
 
 @RestController
 class S040V43ApiImpl(
-    val s040V43Service: S040V43Service
+    val documentService: DocumentService,
 ) : S040Api {
 
     val log = logger {}
@@ -33,7 +33,7 @@ class S040V43ApiImpl(
         s040Type: S040Type
     ): ResponseEntity<Unit> {
         val s040 = s040Type.toS040()
-        s040V43Service.put(internationalId, documentId, "S040", s040)
+        documentService.put(internationalId, documentId, "S040", s040)
         return ResponseEntity(HttpStatus.OK)
     }
 
