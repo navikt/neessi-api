@@ -1,6 +1,10 @@
 package no.nav.neessi.api.integration.rina.model.v43.documents.s040
 
-import no.nav.model.v43.*
+import no.nav.model.v43.address.Address
+import no.nav.model.v43.document.s040.S040
+import no.nav.model.v43.document.s040.S040Request
+import no.nav.model.v43.person.BirthPlace
+import no.nav.model.v43.person.Pin
 import no.nav.neessi.api.integration.rina.common.eessiAdditionalInformation
 import no.nav.neessi.api.integration.rina.common.rinaCountryCodeValueWrapper
 import no.nav.neessi.api.integration.rina.common.valueWrapper

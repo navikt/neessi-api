@@ -1,7 +1,7 @@
 package no.nav.neessi.api.integration.rina.client
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
-import no.nav.model.v43.S040
+import no.nav.model.v43.document.s040.S040
 import no.nav.neessi.api.integration.rina.config.RinaCpiServiceProperties
 import no.nav.neessi.api.integration.rina.model.v43.documents.s040.s040cpiRootModelV43
 import org.springframework.http.MediaType.APPLICATION_JSON

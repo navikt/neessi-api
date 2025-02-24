@@ -4,7 +4,6 @@ import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.neessi.api.service.documents.DocumentService
 import no.nav.neessi.openapi.api.v43.S040Api
 import no.nav.neessi.openapi.model.v43.S040Type
-import no.nav.neessi.webapp.v43.mapper.toS040
 import no.nav.security.token.support.core.api.Unprotected
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

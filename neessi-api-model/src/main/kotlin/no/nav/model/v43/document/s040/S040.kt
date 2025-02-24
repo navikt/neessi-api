@@ -1,5 +1,6 @@
-package no.nav.model.v43
+package no.nav.model.v43.document.s040
 
+import no.nav.model.v43.person.Person
 import java.time.LocalDate
 
 data class S040(

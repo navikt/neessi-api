@@ -1,6 +1,10 @@
 package no.nav.neessi.webapp.v43.mapper
 
-import no.nav.model.v43.*
+import no.nav.model.v43.address.Address
+import no.nav.model.v43.document.s040.S040
+import no.nav.model.v43.document.s040.S040Request
+import no.nav.model.v43.person.*
+import no.nav.model.v43.sector.Sector
 import no.nav.neessi.openapi.model.v43.*
 
 fun Address.toAddressType() = AddressType(

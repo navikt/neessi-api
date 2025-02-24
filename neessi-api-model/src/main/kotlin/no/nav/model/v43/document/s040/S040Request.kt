@@ -1,16 +1,16 @@
-package no.nav.model.v43
+package no.nav.model.v43.document.s040
 
 import no.nav.model.common.EessiValue
 import java.time.LocalDate
 
 data class S040Request(
-    val actingCompetentInstitutionWhoseLegislation: String? = null,
-    val typeOfBenefitConcerned: TypeOfBenefitConcerned? = null,
-    val natureOfBenefitConcerned: NatureOfBenefitConcerned? = null,
-    val fixedPeriodConcernedStartDate: LocalDate? = null,
-    val fixedPeriodConcernedEndDate: LocalDate? = null,
-    val openPeriodConcerned: OpenPeriodConcerned? = null,
-    val openPeriodConcernedStartDate: LocalDate? = null
+    val actingCompetentInstitutionWhoseLegislation: String?,
+    val typeOfBenefitConcerned: TypeOfBenefitConcerned?,
+    val natureOfBenefitConcerned: NatureOfBenefitConcerned?,
+    val fixedPeriodConcernedStartDate: LocalDate?,
+    val fixedPeriodConcernedEndDate: LocalDate?,
+    val openPeriodConcerned: OpenPeriodConcerned?,
+    val openPeriodConcernedStartDate: LocalDate?
 ) {
 
     enum class TypeOfBenefitConcerned(override val eessiValue: String) : EessiValue {

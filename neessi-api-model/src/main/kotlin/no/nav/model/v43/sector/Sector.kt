@@ -1,4 +1,4 @@
-package no.nav.model.v43
+package no.nav.model.v43.sector
 
 import no.nav.model.common.EessiValue
 
