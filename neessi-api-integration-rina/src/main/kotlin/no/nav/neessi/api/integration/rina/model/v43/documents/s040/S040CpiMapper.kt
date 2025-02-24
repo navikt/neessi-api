@@ -34,13 +34,13 @@ val S040Request.cpiRequest: S040Cpi.Request
 
 val S040Request.periodConcerned: S040Cpi.PeriodConcerned
     get() = S040Cpi.PeriodConcerned(
-        fixedPeriod = fixedPeriod,
-        openPeriod = openPeriod
+        fixedPeriod = if (fixedPeriodConcernedStartDate == null) null else fixedPeriod,
+        openPeriod = if (openPeriodConcernedStartDate == null) null else openPeriod
     )
 
 val S040Request.openPeriod: S040Cpi.OpenPeriod
     get() = S040Cpi.OpenPeriod(
-        startDate = fixedPeriodConcernedStartDate,
+        startDate = openPeriodConcernedStartDate,
         typeOpenPeriod = openPeriodConcerned.valueWrapper,
     )
 
