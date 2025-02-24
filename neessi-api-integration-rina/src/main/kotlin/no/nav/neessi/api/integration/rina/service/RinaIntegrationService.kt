@@ -1,11 +1,12 @@
 package no.nav.neessi.api.integration.rina.service
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
+import no.nav.model.v43.document.s040.S040
 import no.nav.neessi.api.integration.rina.client.CpiCasesClient
 import no.nav.neessi.api.integration.rina.client.CpiDocumentClient
 import no.nav.neessi.api.integration.rina.client.RinaActionsClient
 import no.nav.neessi.api.integration.rina.model.case.RinaCase
-import org.springframework.core.ParameterizedTypeReference
+import no.nav.neessi.api.integration.rina.model.v43.documents.s040.s040Model
 import org.springframework.stereotype.Service
 
 @Service
@@ -27,11 +28,11 @@ class RinaIntegrationService(
         log.info { "Successfully performed action for $internationalId" }
     }
 
-    fun <T> get(internationalId: String, setId: String, typeRef: ParameterizedTypeReference<T>): T {
+    fun get(internationalId: String, setId: String): S040 {
         log.info { "Get for $internationalId" }
         val rinaCase = casesClient.getCase(internationalId)
         log.info { "Rina case: ${rinaCase.id}" }
-        return documentClient.getDocument(rinaCase.id, setId, typeRef)
+        return documentClient.getDocument(rinaCase.id, setId).s040Model
     }
 
     fun RinaCase.getAction(operation: String, template: String) =
