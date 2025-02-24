@@ -15,8 +15,8 @@ class RinaIntegrationService(
 
     val log = logger {}
 
-    fun put(internationalId: String, documentId: UUID, sedType: String, document: Any) {
-        log.info { "Creating document $documentId in $internationalId "  }
+    fun put(internationalId: String, setId: UUID, sedType: String, document: Any) {
+        log.info { "Creating document $setId in $internationalId "  }
         val rinaCase = casesClient.getCase(internationalId)
         log.info { "Found caseId ${rinaCase.id} for $internationalId" }
         val action = rinaCase.getAction("Update", sedType)

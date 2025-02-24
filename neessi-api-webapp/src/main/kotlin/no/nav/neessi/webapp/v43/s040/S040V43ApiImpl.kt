@@ -19,20 +19,21 @@ class S040V43ApiImpl(
 
     @Unprotected
     override fun getS040v43(
-        documentId: UUID,
+        setId: UUID,
         internationalId: String
     ): ResponseEntity<S040Type> {
-        return ResponseEntity(HttpStatus.NOT_IMPLEMENTED)
+        val s040 = documentService.get(internationalId, setId)
+        return ResponseEntity(s040.toS040Type(), HttpStatus.OK)
     }
 
     @Unprotected
     override fun putS040v43(
-        documentId: UUID,
+        setId: UUID,
         internationalId: String,
         s040Type: S040Type
     ): ResponseEntity<Unit> {
         val s040 = s040Type.toS040()
-        documentService.put(internationalId, documentId, "S040", s040)
+        documentService.put(internationalId, setId, "S040", s040)
         return ResponseEntity(HttpStatus.OK)
     }
 

@@ -4,11 +4,11 @@ get:
   summary: Retrieve s040 in CDM version 4.3
   description: Retrieve s040 in CDM version 4.3
   parameters:
-    - name: documentId
+    - name: setId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/documentId'
+        $ref: '../../properties/documents.yaml#/setId'
     - name: internationalId
       in: path
       required: true
@@ -39,11 +39,11 @@ put:
   summary: Update s040 in CDM version 4.3
   description: Updates s040 in CDM version 4.3
   parameters:
-    - name: documentId
+    - name: setId
       in: path
       required: true
       schema:
-        $ref: '../../properties/documents.yaml#/documentId'
+        $ref: '../../properties/documents.yaml#/setId'
     - name: internationalId
       in: path
       required: true

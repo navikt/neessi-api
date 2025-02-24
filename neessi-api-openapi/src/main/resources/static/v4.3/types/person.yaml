@@ -39,8 +39,6 @@ PersonWithAddressType:
   allOf:
     - $ref: "#/PersonType"
     - type: object
-      required:
-        - address
       properties:
         address:
           $ref: '../types/address.yaml#/AddressType'

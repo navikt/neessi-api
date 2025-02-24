@@ -1,4 +1,4 @@
-package no.nav.neessi.webapp
+package no.nav.neessi.webapp.v44
 
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.Parameter

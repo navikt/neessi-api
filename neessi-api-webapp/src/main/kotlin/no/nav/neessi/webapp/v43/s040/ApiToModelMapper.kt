@@ -49,7 +49,7 @@ fun PersonWithAddressType.toPerson() = Person(
     birthPlace = birthPlace?.toBirthPlace(),
     father = father?.toParent(),
     mother = mother?.toParent(),
-    address = address.toAddress()
+    address = address?.toAddress()
 )
 
 fun S040RequestType.toS040Request() = S040Request(
