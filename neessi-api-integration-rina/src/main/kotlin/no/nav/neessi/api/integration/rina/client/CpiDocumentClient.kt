@@ -15,7 +15,7 @@ class CpiDocumentClient(
     fun <T> getDocument(caseId: Long, setId: String, typeRef: ParameterizedTypeReference<T>): T {
         return cpiRestClient
             .get()
-            .uri("/eessiRest/Cases/$caseId/Documents/$setId")
+            .uri("/Cases/$caseId/Documents/$setId")
             .accept(APPLICATION_JSON)
             .retrieve()
             .toEntity(typeRef)
