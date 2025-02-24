@@ -108,7 +108,9 @@ data class S040Cpi(
 
     data class PeriodConcerned(
         @JsonProperty("FixedPeriod")
-        val fixedPeriod: FixedPeriod?
+        val fixedPeriod: FixedPeriod?,
+        @JsonProperty("OpenPeriod")
+        val openPeriod: OpenPeriod?,
     )
 
     data class FixedPeriod(
@@ -118,4 +120,9 @@ data class S040Cpi(
         val endDate: LocalDate?
     )
 
+    data class OpenPeriod(
+        val typeOpenPeriod: EessiValueWrapper?,
+        @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+        val startDate: LocalDate?,
+    )
 }
