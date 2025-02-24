@@ -55,6 +55,91 @@ put:
       'application/json':
         schema:
           $ref: 'model.yaml#/S040Type'
+        examples:
+          fixedPeriod:
+            value:
+              person:
+                familyName: "Jane"
+                forename: "John"
+                dateBirth: "1970-01-01"
+                sex: "female"
+                familyNameAtBirth: "Doe"
+                forenameAtBirth: "Jane"
+                pin:
+                  - pin: "1234567890"
+                    sector: "sickness"
+                    countryCode: "NOR"
+                    institutionId: "NO:NAVAT07"
+                nationality:
+                  - "NOR"
+                birthPlace:
+                  town: "Berlin"
+                  region: "Berlin"
+                  countryCode: "NOR"
+                father:
+                  forename: "John"
+                  familyNameAtBirth: "Doe"
+                mother:
+                  forename: "John"
+                  familyNameAtBirth: "Doe"
+                address:
+                  street: "Hauptstrasse 1"
+                  buildingName: "Building A"
+                  town: "Berlin"
+                  postalCode: "10115"
+                  region: "Berlin"
+                  countryCode: "NOR"
+                  addressType: "residence"
+              residenceInCountrySince: "2020-01-01"
+              request:
+                actingCompetentInstitutionWhoseLegislation: "Text"
+                typeOfBenefitConcernedEnumType: "sickness"
+                natureOfBenefitConcernedEnumType: "in-cash"
+                fixedPeriodConcernedStartDate: "2020-01-01"
+                fixedPeriodConcernedEndDate: "2021-01-01"
+              additionalInformation: "Additional information from the user"
+          openPeriod:
+            value:
+              person:
+                familyName: "Jane"
+                forename: "John"
+                dateBirth: "1970-01-01"
+                sex: "female"
+                familyNameAtBirth: "Doe"
+                forenameAtBirth: "Jane"
+                pin:
+                  - pin: "1234567890"
+                    sector: "sickness"
+                    countryCode: "NOR"
+                    institutionId: "NO:NAVAT07"
+                nationality:
+                  - "NOR"
+                birthPlace:
+                  town: "Berlin"
+                  region: "Berlin"
+                  countryCode: "NOR"
+                father:
+                  forename: "John"
+                  familyNameAtBirth: "Doe"
+                mother:
+                  forename: "John"
+                  familyNameAtBirth: "Doe"
+                address:
+                  street: "Hauptstrasse 1"
+                  buildingName: "Building A"
+                  town: "Berlin"
+                  postalCode: "10115"
+                  region: "Berlin"
+                  countryCode: "NOR"
+                  addressType: "residence"
+              residenceInCountrySince: "2020-01-01"
+              request:
+                actingCompetentInstitutionWhoseLegislation: "Text"
+                typeOfBenefitConcernedEnumType: "sickness"
+                natureOfBenefitConcernedEnumType: "in-cash"
+                openPeriodConcernedEnumType: "open-ended"
+                openPeriodConcernedStartDate: "2020-01-01"
+              additionalInformation: "Additional information from the user"
   operationId: putS040v43
   responses:
     '201':

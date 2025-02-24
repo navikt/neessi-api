@@ -1,5 +1,8 @@
 BirthPlaceType:
   type: object
+  required:
+    - town
+    - countryCode
   properties:
     town:
       $ref: '../properties/address.yaml#/town'

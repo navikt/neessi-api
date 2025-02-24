@@ -1,6 +1,5 @@
 package no.nav.neessi.webapp.v43.s040
 
-import io.github.oshai.kotlinlogging.KotlinLogging.logger
 import no.nav.neessi.api.service.documents.DocumentService
 import no.nav.neessi.openapi.api.v43.S040Api
 import no.nav.neessi.openapi.model.v43.S040Type
@@ -14,8 +13,6 @@ import java.util.*
 class S040V43ApiImpl(
     val documentService: DocumentService,
 ) : S040Api {
-
-    val log = logger {}
 
     @Unprotected
     override fun getS040v43(

@@ -2,11 +2,21 @@ sectorEnumType:
   type: string
   description: >
     Valid values are 
-      * 'sickness' - Sickness benefits, value `01` in EESSI
-      * 'pensions' - Pensions benefits, value `02` in EESSI
-  maxLength: 100
+      * 'awod' - value `01` in EESSI
+      * 'family' - Family benefits, value `02` in EESSI
+      * 'all' - value `03` in EESSI
+      * 'pensions' - Pensions benefits, value `04` in EESSI
+      * 'recovery' - Recovery benefits, value `05` in EESSI
+      * 'sickness' - Sickness benefits, value `06` in EESSI
+      * 'unemployment' - Unemployment benefits, value `07` in EESSI
   minLength: 1
+  maxLength: 25
   enum:
-    - "sickness"
+    - "awod"
+    - "family"
+    - "all"
     - "pensions"
+    - "recovery"
+    - "sickness"
+    - "unemployment"
   example: 'sickness'
