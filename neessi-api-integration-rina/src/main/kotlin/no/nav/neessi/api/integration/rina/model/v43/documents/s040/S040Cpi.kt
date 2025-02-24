@@ -33,10 +33,10 @@ data class S040Cpi(
     )
 
     data class PersonIdentification(
-        val familyName: String?,
-        val forename: String?,
+        val familyName: String,
+        val forename: String,
         @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-        val dateBirth: LocalDate?,
+        val dateBirth: LocalDate,
         val sex: EessiValueWrapper?,
         val familyNameAtBirth: String?,
         val forenameAtBirth: String?,

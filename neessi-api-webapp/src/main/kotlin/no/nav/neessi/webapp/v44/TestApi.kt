@@ -3,7 +3,7 @@ package no.nav.neessi.webapp.v44
 import io.swagger.v3.oas.annotations.Operation
 import io.swagger.v3.oas.annotations.Parameter
 import io.swagger.v3.oas.annotations.responses.ApiResponse
-import no.nav.neessi.api.integration.rina.client.CpiClient
+import no.nav.neessi.api.integration.rina.client.TestCpiClient
 import no.nav.neessi.api.integration.rina.client.TestPayload
 import no.nav.security.token.support.core.api.Unprotected
 import org.springframework.http.HttpStatusCode
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController
 
 @RestController
 class TestApi(
-    val cpiClient: CpiClient
+    val testCpiClient: TestCpiClient
 ) {
 
     @Unprotected
@@ -39,7 +39,7 @@ class TestApi(
         @Parameter(description = "", required = true) @RequestBody
         payload: TestPayload
     ): ResponseEntity<String> {
-        val body = cpiClient.postTest(payload)
+        val body = testCpiClient.postTest(payload)
         return ResponseEntity(body, HttpStatusCode.valueOf(200))
     }
 
@@ -64,7 +64,7 @@ class TestApi(
         @Parameter(description = "", required = true) @RequestBody
         payload: TestPayload
     ): ResponseEntity<String> {
-        val body = cpiClient.getTest(payload)
+        val body = testCpiClient.getTest(payload)
         return ResponseEntity(body, HttpStatusCode.valueOf(200))
     }
 
@@ -89,7 +89,7 @@ class TestApi(
         @Parameter(description = "", required = true) @RequestBody
         payload: TestPayload
     ): ResponseEntity<String> {
-        val body = cpiClient.putTest(payload)
+        val body = testCpiClient.putTest(payload)
         return ResponseEntity(body, HttpStatusCode.valueOf(200))
     }
 

@@ -22,3 +22,7 @@ val List<String>?.rinaCountryCodeValueWrapper: EessiValueWrapper
             EessiValueWrapper(emptyList())
         else
             EessiValueWrapper(this.map { iso3ToEessiIso2(it) })
+
+inline fun <reified T> EessiValueWrapper.singleEnumFromEessiValue(): T where T : Enum<T>, T : EessiValue =
+    enumValues<T>().firstOrNull { it.eessiValue == this.value.single() }
+        ?: throw IllegalArgumentException("No eessi enum mappings for $this")

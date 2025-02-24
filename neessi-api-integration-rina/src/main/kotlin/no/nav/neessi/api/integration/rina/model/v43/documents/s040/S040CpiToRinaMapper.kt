@@ -19,7 +19,7 @@ val S040.s040Cpi: S040Cpi
         person = cpiPerson,
         addressPerson = addressPerson,
         request = request.cpiRequest,
-        additionalInformation = additionalInformation.eessiAdditionalInformation,
+        additionalInformation = additionalInformation?.eessiAdditionalInformation,
         sedGVer = "4",
         sedVer = "3",
         sedPackage = "Sector Components/Sickness/S040"
@@ -101,7 +101,7 @@ val BirthPlace.placeBirth: S040Cpi.PlaceBirth
     get() = S040Cpi.PlaceBirth(
         town = town,
         region = region,
-        country = countryCode?.rinaCountryCodeValueWrapper
+        country = countryCode.rinaCountryCodeValueWrapper
     )
 
 val S040.additionalInformationPerson: S040Cpi.AdditionalInformationPerson

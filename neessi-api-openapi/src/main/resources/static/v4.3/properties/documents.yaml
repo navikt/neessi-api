@@ -12,7 +12,7 @@ documentId:
 
 setId:
   type: string
-  format: uuid
+#  format: uuid
   description: The unique identifier of the set.
   example: "00000000-0000-0000-0000-000000000001"
 

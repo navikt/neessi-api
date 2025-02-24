@@ -1,16 +1,14 @@
 package no.nav.neessi.api.integration.rina.client
 
 import io.github.oshai.kotlinlogging.KotlinLogging.logger
-import no.nav.model.v43.document.s040.S040
 import no.nav.neessi.api.integration.rina.config.RinaCpiServiceProperties
-import no.nav.neessi.api.integration.rina.model.v43.documents.s040.s040cpiRootModelV43
 import org.springframework.http.MediaType.APPLICATION_JSON
 import org.springframework.stereotype.Component
 import org.springframework.web.client.RestClient
 import org.springframework.web.client.toEntity
 
 @Component
-class CpiClient(
+class TestCpiClient(
     val cpiRestClient: RestClient,
     val properties: RinaCpiServiceProperties,
 ) {
@@ -52,17 +50,6 @@ class CpiClient(
             .toEntity<String>()
             .body!!
     }
-
-    fun put(sO40: S040) {
-        put(sO40.s040cpiRootModelV43)
-    }
-
-    private fun put(any: Any) =
-        cpiRestClient
-            .put()
-            .uri("/Cases/")
-            .body(any)
-            .retrieve()
 
 }
 

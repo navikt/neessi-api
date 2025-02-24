@@ -7,7 +7,6 @@ import no.nav.security.token.support.core.api.Unprotected
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.RestController
-import java.util.*
 
 @RestController
 class S040V43ApiImpl(
@@ -16,7 +15,7 @@ class S040V43ApiImpl(
 
     @Unprotected
     override fun getS040v43(
-        setId: UUID,
+        setId: String,
         internationalId: String
     ): ResponseEntity<S040Type> {
         val s040 = documentService.get(internationalId, setId)
@@ -25,7 +24,7 @@ class S040V43ApiImpl(
 
     @Unprotected
     override fun putS040v43(
-        setId: UUID,
+        setId: String,
         internationalId: String,
         s040Type: S040Type
     ): ResponseEntity<Unit> {
