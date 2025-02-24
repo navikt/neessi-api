@@ -13,7 +13,8 @@ val S040CpiRoot.s040Model: S040
         residenceInCountrySince = s040.addressPerson?.residenceInThisCountrySince,
     )
 
-fun S040Cpi.toRequest(): S040Request = TODO()
+fun S040Cpi.toRequest(): S040Request = 
+    S040Request(null, null, null, null, null, null, null)
 
 fun S040Cpi.toPerson(): Person =
     Person(
