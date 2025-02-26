@@ -18,6 +18,11 @@ class TestApi(
     val testCpiClient: TestCpiClient
 ) {
 
+    /*
+        midlertidig for å teste CPI og finne ut hvilke APIer som burde brukes
+     */
+
+
     @Unprotected
     @Operation(
         summary = "summary",

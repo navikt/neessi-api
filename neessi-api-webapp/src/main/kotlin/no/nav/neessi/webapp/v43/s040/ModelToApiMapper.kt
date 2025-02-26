@@ -11,6 +11,10 @@ import no.nav.model.v43.person.Pin
 import no.nav.neessi.openapi.model.v43.*
 import no.nav.neessi.openapi.model.v43.S040RequestType.*
 
+/*
+    Hvordan liker vi visuelt at mappers skal se ut? fun vs val f. eks.
+ */
+
 fun Address.toAddressType() = AddressType(
     town = town,
     countryCode = countryCode,

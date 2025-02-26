@@ -1,3 +1,4 @@
 ### Neessi API
 
-/api/v1/documents/s040
+Prosjektet er laget for å ha et diskusjonsgrunnlag 
+for hvordan vi ønsker å ha løsningen vår.

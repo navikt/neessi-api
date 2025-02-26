@@ -13,12 +13,17 @@ class S040V43ApiImpl(
     val documentService: DocumentService,
 ) : S040Api {
 
+    /*
+        veldefinert API er veldig positivt, dette er delen av
+        appliaksjonen jeg føler gjør arbeidet verdt det
+     */
+
     @Unprotected
     override fun getS040v43(
         setId: String,
         internationalId: String
     ): ResponseEntity<S040Type> {
-        val s040 = documentService.get(internationalId, setId)
+        val s040 = documentService.getS040(internationalId, setId)
         return ResponseEntity(s040.toS040Type(), HttpStatus.OK)
     }
 

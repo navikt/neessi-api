@@ -1,5 +1,12 @@
 package no.nav.neessi.api.integration.rina.model.v43.country
 
+
+/*
+    Egen funksjon for mapping er ryddig og enkelt, nå CDM versjonert etter diskusjoner med Arild
+    hva tenker vi?
+ */
+
+
 fun iso3ToEessiIso2(iso3: String) =
     when (iso3) {
         "AND" -> "AD"

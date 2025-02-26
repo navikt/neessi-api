@@ -18,3 +18,7 @@ tags:
 paths:
   '/v4.3/cases/{internationalId}/documents/s040/{setId}':
     $ref: 'v4.3/documents/s040/operations_root.yaml'
+
+
+# Dette er en del av koden jeg mener
+# gjør det enklere å holde oversikt over hva vi jobber med.

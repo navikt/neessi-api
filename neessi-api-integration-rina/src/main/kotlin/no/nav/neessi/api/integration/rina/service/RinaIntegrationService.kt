@@ -18,6 +18,13 @@ class RinaIntegrationService(
 
     val log = logger {}
 
+
+    /*
+     * slik put er laget her skalerer okei, men det blir
+     * veldig rotete med egen funksjon for S040 og alle andre SED (og versjoner av disse)
+     */
+
+
     fun put(internationalId: String, setId: String, sedType: String, document: Any) {
         log.info { "Creating document $setId in $internationalId "  }
         val rinaCase = casesClient.getCase(internationalId)
@@ -28,7 +35,7 @@ class RinaIntegrationService(
         log.info { "Successfully performed action for $internationalId" }
     }
 
-    fun get(internationalId: String, setId: String): S040 {
+    fun getS040(internationalId: String, setId: String): S040 {
         log.info { "Get for $internationalId" }
         val rinaCase = casesClient.getCase(internationalId)
         log.info { "Rina case: ${rinaCase.id}" }

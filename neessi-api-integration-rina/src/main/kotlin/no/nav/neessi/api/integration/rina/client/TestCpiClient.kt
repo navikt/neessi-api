@@ -15,6 +15,10 @@ class TestCpiClient(
 
     val log = logger {}
 
+    /*
+        klassen bare laget for test av cpi API'et, vil fjernet senere.
+     */
+
     fun postTest(payload: TestPayload): String {
         val uri = payload.path
         log.info { "Sending test: ${properties.rinaBaseUrl}/$uri" }

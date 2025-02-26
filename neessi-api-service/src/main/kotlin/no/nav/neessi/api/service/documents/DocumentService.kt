@@ -9,11 +9,18 @@ class DocumentService(
     val rinaIntegrationService: RinaIntegrationService
 ) {
 
+
+    /*
+        Denne klassen føles overflødig, spesielt hvis vi ikke får den generisk,
+        argument for å ikke ha  egen domenemodell og service lag
+     */
+
     fun put(internationalId: String, setId: String, sedType: String, document: Any) {
         rinaIntegrationService.put(internationalId, setId, sedType, document)
     }
 
-    fun get(internationalId: String, setId: String): S040 {
-        return rinaIntegrationService.get(internationalId, setId)
+    fun getS040(internationalId: String, setId: String): S040 {
+        return rinaIntegrationService.getS040(internationalId, setId)
     }
+
 }

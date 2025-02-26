@@ -4,6 +4,10 @@ import java.time.Instant
 import java.time.LocalDate
 import java.util.*
 
+/*
+    ikke CDM versjonshåndtert - tanker?
+ */
+
 data class RinaCase(
     val id: Long,
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss.SSSX")
